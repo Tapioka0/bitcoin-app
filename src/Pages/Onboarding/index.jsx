@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { DataAnalyticsSVG } from "../../Components/Svg/dataAnalytics";
+import { OnboardingFooter } from "../../layouts/Footer";
 import { Header } from "../../layouts/Header/Header";
-
 export const OnboardingPage = () => {
   return (
     <Container>
       <Header title={"Bitcoin APP"} />
+      <DataAnalyticsSVG />
+      <OnboardingFooter />
     </Container>
   );
 };
@@ -16,4 +19,6 @@ const Container = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 `;

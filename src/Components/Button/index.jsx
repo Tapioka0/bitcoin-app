@@ -1,12 +1,22 @@
 import styled from "styled-components";
-
-export const Button = ({ text }) => {
-  return <Boton>{text}</Boton>;
+import { useNavigate } from "react-router-dom";
+export const Button = ({ text, cases, width }) => {
+  const navigate = useNavigate();
+  return (
+    <Boton
+      width={width}
+      onClick={() => {
+        if (cases === 1) return navigate("/registro", { replace: true });
+      }}
+    >
+      {text}
+    </Boton>
+  );
 };
 
 const Boton = styled.button`
   cursor: pointer;
-
+  width: ${(props) => props.width ?? ""};
   display: flex;
   flex-direction: row;
   justify-content: center;

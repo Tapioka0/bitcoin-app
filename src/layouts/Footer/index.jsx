@@ -14,7 +14,7 @@ export const OnboardingFooter = () => {
           industry.
         </p>
         <div className="buttons">
-          <Button text={"Iniciar ➜"} />
+          <Button text={"Iniciar ➜"} cases={1} />
         </div>
       </div>
     </Footer>

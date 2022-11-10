@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-export const Button = ({ text, cases, width }) => {
+export const Button = ({ text, cases, width, disabled }) => {
   const navigate = useNavigate();
   return (
     <Boton
       width={width}
+      disabled={disabled}
+      type={"submit"}
       onClick={() => {
         if (cases === 1) return navigate("/registro", { replace: true });
       }}

@@ -2,13 +2,21 @@ import styled from "styled-components";
 import { DataAnalyticsSVG } from "../../Components/Svg/dataAnalytics";
 import { OnboardingFooter } from "../../layouts/Footer";
 import { Header } from "../../layouts/Header/Header";
+import { MainPage } from "../Main";
 export const OnboardingPage = () => {
+  const numero = localStorage.getItem("numero");
   return (
-    <Container>
-      <Header title={"Bitcoin APP"} />
-      <DataAnalyticsSVG />
-      <OnboardingFooter />
-    </Container>
+    <>
+      {numero ? (
+        <MainPage />
+      ) : (
+        <Container>
+          <Header title={"Bitcoin APP"} />
+          <DataAnalyticsSVG />
+          <OnboardingFooter />
+        </Container>
+      )}
+    </>
   );
 };
 

@@ -34,4 +34,7 @@ const Head = styled.header`
 
     color: #5c7190;
   }
+  @media only screen and (max-width: 620px) {
+    left: 30%;
+  }
 `;

@@ -60,7 +60,7 @@ export const MainPage = () => {
 };
 
 const Container = styled.div`
-  background-color: #e5e5e5;
+  background-color: #f6f7f8;
   width: 100vw;
   height: 100vh;
   background-position: center;
@@ -88,8 +88,8 @@ const Container = styled.div`
     position: absolute;
     left: 5%;
     right: 5%;
-    top: 53.28%;
-    bottom: 20%;
+    top: 43.28%;
+    bottom: 31.9%;
 
     /* Neutrales/BG */
 
@@ -100,8 +100,8 @@ const Container = styled.div`
 
   .title {
     position: absolute;
-    left: 5%;
-    top: 5.35%;
+    left: 5.5%;
+    top: 8.35%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;

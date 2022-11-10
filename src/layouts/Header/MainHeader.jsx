@@ -36,5 +36,6 @@ const Head = styled.header`
     align-items: center;
     text-align: center;
     color: #7b8186;
+    padding-right: 38px;
   }
 `;

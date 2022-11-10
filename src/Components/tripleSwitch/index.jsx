@@ -89,8 +89,8 @@ const Div = styled.div`
   display: flex;
   left: 5%;
   right: 5%;
-  top: 25.47%;
-  bottom: 51.22%;
+  top: 17.47%;
+  bottom: 60.22%;
   flex-direction: row;
   background: #ffffff;
   border-radius: 20px;
@@ -123,6 +123,7 @@ const Div = styled.div`
   h4 {
     margin: 0;
     font-weight: 500;
+    font-family: "Inter";
   }
 
   .green-font {

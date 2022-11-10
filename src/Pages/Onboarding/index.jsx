@@ -21,7 +21,7 @@ export const OnboardingPage = () => {
 };
 
 const Container = styled.div`
-  background-color: #e5e5e5;
+  background-color: #e4f2f2;
   width: 100vw;
   height: 100vh;
   background-position: center;

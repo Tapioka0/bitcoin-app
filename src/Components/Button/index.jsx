@@ -28,7 +28,7 @@ const Boton = styled.button`
   color: #fff;
   max-width: 600px;
   /* Verdes/Primary */
-
+  font-family: "Inter";
   background: #198c9b;
   border-radius: 20px;
 `;

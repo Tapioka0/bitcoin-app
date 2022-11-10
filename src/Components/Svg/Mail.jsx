@@ -31,6 +31,7 @@ const Div = styled.div`
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 113px;
-  margin-left: 10px;
+  top: 122px;
+
+  left: 15px;
 `;

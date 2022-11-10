@@ -22,11 +22,11 @@ export const Form = () => {
     // set keys
     localStorage.setItem("numero", numero);
     localStorage.setItem("correo", correo);
-    swal({
-      title: "Cuenta creada!",
-      text: "successfully",
-      icon: "success",
-    });
+    // swal({
+    //   title: "Cuenta creada!",
+    //   text: "successfully",
+    //   icon: "success",
+    // });
     return navigate("/", { replace: true });
   };
 
@@ -39,8 +39,9 @@ export const Form = () => {
   return (
     <FormContainer onSubmit={sumit}>
       <div className="inputs">
-        <label>Ingresa tu celular</label>
-
+        <div className="tag">
+          <label>Ingresa tu celular</label>
+        </div>
         <PhoneSGV />
         <input
           className="input-icon"
@@ -52,7 +53,9 @@ export const Form = () => {
         />
       </div>
       <div className="inputs">
-        <label>Y tu correo</label>
+        <div className="tag">
+          <label>Y tu correo</label>
+        </div>
         <MailSVG />
         <input
           type={"email"}
@@ -101,7 +104,10 @@ const FormContainer = styled.form`
 
     color: #4a4a4a;
   }
-
+  .tag {
+    padding-left: 15px;
+    padding-bottom: 4px;
+  }
   input {
     display: block;
     box-sizing: border-box;
@@ -113,12 +119,12 @@ const FormContainer = styled.form`
     border: 2px solid #ffffff;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    padding-left: 39px;
+    padding-left: 43px;
   }
 
   .Footer {
     position: relative;
-    top: 30%;
+    top: 40%;
   }
 
   .text {
@@ -141,5 +147,11 @@ const FormContainer = styled.form`
   }
   .buttons button {
     margin-bottom: 25px;
+  }
+  @media only screen and (max-width: 620px) {
+    .Footer {
+      position: relative;
+      top: 20%;
+    }
   }
 `;

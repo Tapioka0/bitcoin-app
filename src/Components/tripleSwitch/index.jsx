@@ -1,30 +1,31 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export const TripleSwitch = () => {
+export const TripleSwitch = ({ setMoneda }) => {
   const [switchPosition, setSwitchPosition] = useState("left");
   const [animation, setAnimation] = useState(null);
 
   const getSwitchAnimation = (value) => {
-    if (value === "center" && switchPosition === "left") {
+    //set Animation
+    if (value === "center" && switchPosition === "left")
       setAnimation("left-to-center");
-    } else if (value === "right" && switchPosition === "center") {
+    else if (value === "right" && switchPosition === "center")
       setAnimation("center-to-right");
-    } else if (value === "center" && switchPosition === "right") {
+    else if (value === "center" && switchPosition === "right")
       setAnimation("right-to-center");
-    } else if (value === "left" && switchPosition === "center") {
+    else if (value === "left" && switchPosition === "center")
       setAnimation("center-to-left");
-    } else if (value === "right" && switchPosition === "left") {
+    else if (value === "right" && switchPosition === "left")
       setAnimation("left-to-right");
-    } else if (value === "left" && switchPosition === "right") {
+    else if (value === "left" && switchPosition === "right")
       setAnimation("right-to-left");
-    }
-    console.log(value);
+    /// set state
+    setMoneda(value);
     setSwitchPosition(value);
   };
   return (
     <Div>
-      <div className="title">
+      <div className="titlet">
         <p>Moneda</p>
       </div>
 
@@ -93,7 +94,7 @@ const Div = styled.div`
   background: #ffffff;
   border-radius: 20px;
 
-  .title {
+  .titlet {
     padding-top: 20px;
     font-family: "Inter";
     font-style: normal;

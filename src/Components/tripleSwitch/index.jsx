@@ -21,6 +21,7 @@ export const TripleSwitch = ({ setMoneda }) => {
       setAnimation("right-to-left");
     /// set state
     setMoneda(value);
+
     setSwitchPosition(value);
   };
   return (
@@ -59,7 +60,7 @@ export const TripleSwitch = ({ setMoneda }) => {
           }`}
           htmlFor="center"
         >
-          <h4>GPB</h4>
+          <h4>GBP</h4>
         </label>
 
         <input
@@ -137,7 +138,7 @@ const Div = styled.div`
     background-color: #f6f7f8;
     position: absolute;
     top: 40%;
-    left: 15%;
+    left: 37%;
   }
 
   .switch {
@@ -189,6 +190,11 @@ const Div = styled.div`
     border-radius: 100px;
   }
 
+  @media only screen and (max-width: 620px) {
+    .main-container {
+      left: 15%;
+    }
+  }
   @keyframes leftToCenter {
     from {
       left: 3px;

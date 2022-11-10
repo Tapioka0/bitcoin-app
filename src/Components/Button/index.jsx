@@ -9,6 +9,7 @@ export const Button = ({ text, cases, width, disabled }) => {
       type={"submit"}
       onClick={() => {
         if (cases === 1) return navigate("/registro", { replace: true });
+        else if (cases === 2) return window.location.reload();
       }}
     >
       {text}
@@ -25,7 +26,7 @@ const Boton = styled.button`
   align-items: center;
   padding: 10px 26px 10px 34px;
   color: #fff;
-
+  max-width: 600px;
   /* Verdes/Primary */
 
   background: #198c9b;

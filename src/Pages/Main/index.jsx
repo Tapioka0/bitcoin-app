@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../Components/Button";
 import { TripleSwitch } from "../../Components/tripleSwitch";
@@ -6,6 +7,25 @@ import { MainHeader } from "../../layouts/Header/MainHeader";
 
 export const MainPage = () => {
   const [moneda, setMoneda] = useState("left");
+  const [price, setPrice] = useState(0);
+
+  let baseURL = "https://api.blockchain.com/v3/exchange/tickers/BTC-";
+  const getPrice = async () => {
+    if (moneda == "left") {
+      const get = await axios(baseURL + "USD");
+      setPrice(get.data.last_trade_price);
+    } else if (moneda == "center") {
+      const get = await axios(baseURL + "GBP");
+      setPrice(get.data.last_trade_price);
+    } else if (moneda == "right") {
+      const get = await axios(baseURL + "EUR");
+      setPrice(get.data.last_trade_price);
+    }
+  };
+
+  useEffect(() => {
+    getPrice();
+  }, [moneda]);
 
   return (
     <Container>
@@ -19,15 +39,21 @@ export const MainPage = () => {
         </div>
 
         <div className="description">
-          <p>United States Dollar</p>
+          <p>
+            {moneda == "left"
+              ? "United States Dollar"
+              : moneda == "center"
+              ? "Great Britain pound"
+              : "Euro"}
+          </p>
         </div>
 
         <div className="content">
-          <p>$39,815.3417</p>
+          <p>${price}</p>
         </div>
       </div>
       <footer>
-        <Button text={"Actualizar"} width={"100%"} disabled={false} />
+        <Button text={"Actualizar"} width={"100%"} disabled={false} cases={2} />
       </footer>
     </Container>
   );
@@ -45,8 +71,11 @@ const Container = styled.div`
 
   h1 {
     position: absolute;
-    left: 20.12%;
+    left: 40%;
     top: 10.29%;
+    margin-left: auto;
+    margin-right: auto;
+
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
@@ -138,5 +167,12 @@ const Container = styled.div`
     bottom: 0;
     width: 100%;
     padding: 0px 20px 30px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 620px) {
+    h1 {
+      left: 22%;
+    }
   }
 `;

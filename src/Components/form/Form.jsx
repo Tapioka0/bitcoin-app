@@ -19,7 +19,7 @@ export const Form = () => {
         text: "Complete todos los campos",
         icon: "error",
       });
-
+    // set keys
     localStorage.setItem("numero", numero);
     localStorage.setItem("correo", correo);
     swal({
@@ -64,15 +64,15 @@ export const Form = () => {
       <div className="Footer">
         <div className="text">
           <p>
-            Al continuar, aceptas los
+            Al continuar, aceptas los{" "}
             <span className="text-green">
-              términos y condiciones y el aviso de privacidad{" "}
+              términos y condiciones y el aviso de privacidad
             </span>
           </p>
         </div>
         <div className="buttons">
           <Button text={"Crear Cuenta"} width={"100%"} disabled={disabled} />
-          <div className="separador" />
+          {/* <div className="separador" /> */}
           <Button text={"Iniciar sesion"} width={"100%"} disabled={true} />
         </div>
       </div>
@@ -118,7 +118,7 @@ const FormContainer = styled.form`
 
   .Footer {
     position: relative;
-    top: 26%;
+    top: 30%;
   }
 
   .text {
@@ -133,7 +133,13 @@ const FormContainer = styled.form`
 
     color: #4a4a4a;
   }
-  .separador {
-    padding-top: 16px;
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .buttons button {
+    margin-bottom: 25px;
   }
 `;

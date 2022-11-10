@@ -2,9 +2,13 @@ import styled from "styled-components";
 import { ArroyLeft } from "../../Components/Svg/Arrow";
 
 export const MainHeader = () => {
+  const clearData = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <Head>
-      <div className="icon">
+      <div className="icon" onClick={() => clearData()}>
         <ArroyLeft />
       </div>
 

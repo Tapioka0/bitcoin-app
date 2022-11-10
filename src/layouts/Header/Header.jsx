@@ -14,7 +14,7 @@ const Head = styled.header`
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 33.11%;
+  left: 40%;
   // right: 0;
   text-align: center;
   top: 10.09%;

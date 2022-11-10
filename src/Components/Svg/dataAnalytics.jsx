@@ -255,8 +255,8 @@ export const DataAnalyticsSVG = () => {
 };
 
 const Div = styled.div`
-  min-height: 223.02029418945312px;
-  min-width: 303.28009033203125px;
+  min-height: 223px;
+  min-width: 303px;
   max-height: 254px;
   max-width: 365px;
   position: absolute;

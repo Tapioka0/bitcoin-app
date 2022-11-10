@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const Header = ({ title }) => {
   return (
-    <>
-      <Head>
-        <p>{title}</p>
-      </Head>
-    </>
+    <Head>
+      <p>{title}</p>
+    </Head>
   );
 };
 

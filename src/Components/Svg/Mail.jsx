@@ -32,6 +32,5 @@ const Div = styled.div`
   width: 24px;
   height: 24px;
   top: 122px;
-
   left: 15px;
 `;

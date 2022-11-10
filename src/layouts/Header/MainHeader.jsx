@@ -15,6 +15,7 @@ export const MainHeader = () => {
       <div className="text">
         <p>Resumen Bitcoint</p>
       </div>
+      {/* for space-between */}
       <div></div>
     </Head>
   );
